@@ -1,3 +1,18 @@
+
+## About
+Simple login authentication system ( signup / login / logout )
+
+### function
+#### basic
+- use `express-validator` for validate post value
+- use `cookie-parser` for control user login token
+
+#### advance
+- use `crypto` for email and password encrypt
+- use `csurf` for CSRF
+- use `redis(ioredis)` for control user login session
+- add `redirectUrl` value for after login redirect
+
 ##  Setup flow
 
 *use Docker Compose !!*
@@ -45,17 +60,3 @@ postgres=# CREATE DATABASE database_development OWNER dev;
 $ docker exec -i -t {web_container_id} sh
 $ sequelize db:migrate --env development
 ```
-
-## About
-Simple login authentication system ( signup / login / logout )
-
-### function
-#### basic
-- use `express-validator` for validate post value
-- use `cookie-parser` for control user login token
-
-#### advance
-- use `crypto` for email and password encrypt
-- use `csurf` for CSRF
-- use `redis(ioredis)` for control user login session
-- add `redirectUrl` value for after login redirect
