@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <br>
+    <br>
+    <% if (user !== null) { %>
+      <a href="/logout" class="btn">logout</a>      
+    <%  } else { %>
+      <a href="/login" class="btn">login</a>
+      <a href="/users/signup" class="btn">sign up</a>
+    <%  } %>
+  </body>
+</html>

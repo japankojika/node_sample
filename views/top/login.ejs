@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel='stylesheet' href='/stylesheets/style.css'>
+    </head>
+    <body>
+        <form action="/login" method="post">
+            <span class="label">email</span><input type="email" name="email" class="input" value="<%= email %>" required><br>
+            <br>
+            <span class="label">password</span><input type="password" name="password" class="input" required><br>
+            <br>
+            <input type="hidden" name="redirectUrl" value="<%= redirectUrl %>">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <% if (errors) { %>
+            <ul class="alert">
+            <% for (let i in errors) { %>
+              <li><%= errors[i].msg %></li>
+            <% } %>
+            </ul>
+        <%  } %>
+        <a href="/" class="btn">return top</a>
+    </body>
+</html>
