@@ -21,7 +21,7 @@
     "ioredis": "^4.9.3",
     "morgan": "~1.9.1",
     "pg": "^7.11.0",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "jest": "^24.8.0"
